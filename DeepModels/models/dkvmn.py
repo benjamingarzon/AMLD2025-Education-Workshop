@@ -113,6 +113,8 @@ class DKVMN(Module):
                 loss.backward()
                 opt.step()
 
+                loss_mean.append(loss.detach().cpu().numpy())
+
             with torch.no_grad():
                 for data in test_loader:
                     q, r, _, _, m = data
