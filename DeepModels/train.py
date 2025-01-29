@@ -91,7 +91,11 @@ def main(model_name, dataset_name, only_preprocess=False):
             pickle.dump(test_dataset.indices, f)
 
     train_loader = DataLoader(
-        train_dataset, batch_size=batch_size, shuffle=True, collate_fn=collate_fn
+        train_dataset,
+        batch_size=batch_size,
+        shuffle=True,
+        collate_fn=collate_fn,
+        generator=generator,
     )
     test_loader = DataLoader(
         test_dataset, batch_size=test_size, shuffle=True, collate_fn=collate_fn
