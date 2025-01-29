@@ -98,7 +98,8 @@ def main(model_name, dataset_name, only_preprocess=False):
         generator=generator,
     )
     test_loader = DataLoader(
-        test_dataset, batch_size=test_size, shuffle=True, collate_fn=collate_fn
+        test_dataset, batch_size=test_size, shuffle=True, collate_fn=collate_fn,,
+        generator=generator,
     )
 
     if optimizer == "sgd":
