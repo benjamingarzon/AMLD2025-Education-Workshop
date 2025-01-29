@@ -59,14 +59,11 @@ class DKT(Module):
 
         max_auc = 0
 
-        device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-        self.to(device)
-
         for i in range(1, num_epochs + 1):
             loss_mean = []
 
             for data in train_loader:
-                q, r, qshft, rshft, m = [d.to(device) for d in data]
+                q, r, qshft, rshft, m = data
                 self.train()
 
                 y = self(q.long(), r.long())
@@ -84,7 +81,7 @@ class DKT(Module):
 
             with torch.no_grad():
                 for data in test_loader:
-                    q, r, qshft, rshft, m = [d.to(device) for d in data]
+                    q, r, qshft, rshft, m = data
 
                     self.eval()
 
