@@ -1,4 +1,4 @@
 {
-    "emb_size": 50,
-    "hidden_size": 50
+    "emb_size": 30,
+    "hidden_size": 30
 }
