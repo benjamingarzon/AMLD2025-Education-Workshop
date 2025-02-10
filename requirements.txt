@@ -128,7 +128,9 @@ sympy==1.13.1
 terminado==0.18.1
 threadpoolctl==3.5.0
 tinycss2==1.4.0
-torch==2.5.1
+torch==2.6.0+cu126
+torchaudio==2.6.0+cu126
+torchvision==0.21.0+cu126
 tornado @ file:///D:/bld/tornado_1666788735597/work
 tqdm==4.67.1
 traitlets @ file:///home/conda/feedstock_root/build_artifacts/traitlets_1733367359838/work

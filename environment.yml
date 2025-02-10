@@ -3,6 +3,9 @@ channels:
   - anaconda
   - conda-forge
   - defaults
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+  - https://repo.anaconda.com/pkgs/msys2
 dependencies:
   - _openmp_mutex=4.5=2_gnu
   - asttokens=3.0.0=pyhd8ed1ab_1
@@ -128,7 +131,6 @@ dependencies:
   - wheel=0.44.0=py311haa95532_0
   - xorg-libxau=1.0.12=h0e40799_0
   - xorg-libxdmcp=1.1.5=h0e40799_0
-  - xz=5.4.6=h8cc25b3_1
   - zeromq=4.3.4=h0e60522_1
   - zipp=3.21.0=pyhd8ed1ab_1
   - zstd=1.5.6=h0ea2cb4_0
@@ -218,7 +220,9 @@ dependencies:
       - terminado==0.18.1
       - threadpoolctl==3.5.0
       - tinycss2==1.4.0
-      - torch==2.5.1
+      - torch==2.6.0+cu126
+      - torchaudio==2.6.0+cu126
+      - torchvision==0.21.0+cu126
       - tqdm==4.67.1
       - types-python-dateutil==2.9.0.20241206
       - uri-template==1.3.0
@@ -228,4 +232,4 @@ dependencies:
       - webencodings==0.5.1
       - websocket-client==1.8.0
       - widgetsnbextension==4.0.13
-prefix: C:\Users\Garzon\anaconda3\envs\AMLDAIEd
+prefix: C:\Users\benja\anaconda3\envs\AMLDAIEd
