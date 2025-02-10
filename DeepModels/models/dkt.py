@@ -65,8 +65,6 @@ class DKT(Module):
             for data in train_loader:
                 q, r, qshft, rshft, m = data
                 self.train()
-
-                y = self(q.long(), r.long())
                 y = (y * one_hot(qshft.long(), self.num_q)).sum(-1)
 
                 y = torch.masked_select(y, m)
